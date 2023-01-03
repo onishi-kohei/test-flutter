@@ -45,19 +45,12 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("test"),
         actions: <Widget>[Icon(Icons.add), Icon(Icons.share)]
       ),
-      body: Container(
-        height: 400,
-        color: Colors.red,
-        child: Row(
-          children: <Widget>[
-            Text(
-              'counter'
-            ),
-            Text(
-              'counter'
-            ),
-          ],
-        ),
+      body: Center(
+        child: FloatingActionButton(
+          child: Text('next'),
+          onPressed: () {
+          }
+        )
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
