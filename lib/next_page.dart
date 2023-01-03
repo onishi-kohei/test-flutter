@@ -9,9 +9,13 @@ class NextPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("next page"),
       ),
-      body: Container(
-        height: double.infinity,
-        color: Colors.red,
+      body: Center(
+        child: FloatingActionButton(
+          child: Text('back'),
+          onPressed: () {
+            Navigator.pop(context);
+          }
+        )
       ),// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
