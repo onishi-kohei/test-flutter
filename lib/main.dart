@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => MyHomePage(title: 'Flutter Demo Home Page'),
-        '/next': (context) => NextPage(),
+        '/next': (context) => NextPage('test'),
 
       },
     );
@@ -55,10 +55,11 @@ class _MyHomePageState extends State<MyHomePage> {
         child: FloatingActionButton(
           child: Text('next'),
           onPressed: () {
-            Navigator.pushNamed(
+            final result = Navigator.pushNamed(
               context,
               '/next'
             );
+            print(result);
           }
         )
       ),
