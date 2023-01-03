@@ -16,7 +16,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MyHomePage(title: 'Flutter Demo Home Page'),
+        '/next': (context) => NextPage(),
+
+      },
     );
   }
 }
@@ -50,10 +55,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: FloatingActionButton(
           child: Text('next'),
           onPressed: () {
-            Navigator.push(
+            Navigator.pushNamed(
               context,
-              MaterialPageRoute(builder: (context) => NextPage(),
-              )
+              '/next'
             );
           }
         )
