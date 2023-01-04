@@ -73,7 +73,14 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('print'),
               onPressed: () {
                 // focus to TextField
-                print(myController.text);
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      content: Text(myController.text),
+                    );
+                  }
+                );
               }
             ),
             FloatingActionButton(
