@@ -51,12 +51,17 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("test"),
         actions: <Widget>[Icon(Icons.add), Icon(Icons.share)]
       ),
-      body: Center(
+      body: Container(
+        width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image.asset('images/tree.jpg'),
-            Icon(Icons.arrow_back),
+            TextField(
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                hintText: 'Enter a search term'
+              ),
+            ),
             FloatingActionButton(
               child: Text('next'),
               onPressed: () async {
