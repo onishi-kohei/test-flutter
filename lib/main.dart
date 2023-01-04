@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset('images/tree.jpg'),
+            Icon(Icons.arrow_back),
             FloatingActionButton(
               child: Text('next'),
               onPressed: () async {
