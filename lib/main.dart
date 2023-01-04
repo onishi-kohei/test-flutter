@@ -52,16 +52,23 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: <Widget>[Icon(Icons.add), Icon(Icons.share)]
       ),
       body: Center(
-        child: FloatingActionButton(
-          child: Text('next'),
-          onPressed: () async {
-            final result = await Navigator.pushNamed(
-              context,
-              '/next'
-            );
-            print(result);
-          }
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Image.network( 'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif'),
+            FloatingActionButton(
+              child: Text('next'),
+              onPressed: () async {
+                final result = await Navigator.pushNamed(
+                  context,
+                  '/next'
+                );
+                print(result);
+              }
+            )
+          ],
         )
+
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
