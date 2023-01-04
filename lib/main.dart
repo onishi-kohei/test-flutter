@@ -44,6 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  final myFocusNode = FocusNode();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,6 +64,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 border: InputBorder.none,
                 hintText: 'Enter a search term'
               ),
+            ),
+            TextField(
+              focusNode: myFocusNode,
+            ),
+            FloatingActionButton(
+              child: Text('focus'),
+              onPressed: () {
+                // focus to TextField
+                myFocusNode.requestFocus();
+              }
             ),
             FloatingActionButton(
               child: Text('next'),
