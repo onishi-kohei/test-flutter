@@ -54,8 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: FloatingActionButton(
           child: Text('next'),
-          onPressed: () {
-            final result = Navigator.pushNamed(
+          onPressed: () async {
+            final result = await Navigator.pushNamed(
               context,
               '/next'
             );
