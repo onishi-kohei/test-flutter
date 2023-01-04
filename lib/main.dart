@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image.network( 'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif'),
+            Image.asset('images/tree.jpg'),
             FloatingActionButton(
               child: Text('next'),
               onPressed: () async {
