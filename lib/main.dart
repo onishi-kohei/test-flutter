@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   final myFocusNode = FocusNode();
-
+  final myController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,12 +67,13 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextField(
               focusNode: myFocusNode,
+              controller: myController,
             ),
             FloatingActionButton(
-              child: Text('focus'),
+              child: Text('print'),
               onPressed: () {
                 // focus to TextField
-                myFocusNode.requestFocus();
+                print(myController.text);
               }
             ),
             FloatingActionButton(
